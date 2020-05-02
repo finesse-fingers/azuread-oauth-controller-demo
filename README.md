@@ -51,3 +51,4 @@ If you are receiving 401 or 403, ensure the access token has the role we assigne
 
 # References
 1. [A web API that calls web APIs](https://docs.microsoft.com/en-us/azure/active-directory/develop/scenario-web-api-call-api-overview)
+2. [How to add app roles in azure ad apps](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-add-app-roles-in-azure-ad-apps)
