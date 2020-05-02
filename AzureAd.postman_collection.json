@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "8280228a-f90c-4447-90b3-9720ac78c3e3",
+		"name": "AzureAd",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get AzureAd Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "<clientId>",
+							"description": "Application (client) ID of the Consumer",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "<clientSecret>",
+							"description": "Secret assigned to the consumer",
+							"type": "text"
+						},
+						{
+							"key": "resource",
+							"value": "<resourceUri>",
+							"description": "Application ID URI of the target (WebAPI we are trying to access)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://login.microsoftonline.com/<tenandId>/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"login",
+						"microsoftonline",
+						"com"
+					],
+					"path": [
+						"<tenandId>",
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Weather Forecast",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/weatherforecast",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"weatherforecast"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
