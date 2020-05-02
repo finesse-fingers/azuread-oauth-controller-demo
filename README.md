@@ -1,5 +1,5 @@
 # azuread-oauth-controller-demo
-A demonostration of using AzureAd app registrations to get (client side) and authenticate the token (server side).
+A demonostration of using AzureAd app registrations to get a token (client side) and authenticate the token (server side).
 
 # Requirements
 1. Create two new App registrations via Azure Portal. Call one server and the other consumer.
